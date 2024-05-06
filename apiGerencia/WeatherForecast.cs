@@ -1,13 +1,19 @@
 namespace apiGerencia
 {
-    public class WeatherForecast
+    public class Metodos
     {
-        public DateOnly Date { get; set; }
+        public double obterPesoIdeal(float altura, char sexo)
+        {
+            if (sexo == 'M') {
+                return 72.7 * altura;
+            }
+            if(sexo == 'F')
+            {
+                return 62.1 * altura;
+            }
 
-        public int TemperatureC { get; set; }
-
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-
-        public string? Summary { get; set; }
+            throw new ArgumentException(
+            "O sexo pode ser apenas 'M' ou 'F'.");
+        }
     }
 }
