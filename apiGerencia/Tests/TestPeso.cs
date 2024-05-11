@@ -10,6 +10,7 @@ namespace apiGerencia.Tests
         [TestMethod]
         public void testObterPesoIdeal()
         {
+            string teste = "Apenas par haver mudaça no codigo";
             var metodos = new Metodos();
             double result = metodos.obterPesoIdeal(1.80, 'M') ;
 
