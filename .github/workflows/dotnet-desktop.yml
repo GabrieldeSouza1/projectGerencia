@@ -1,8 +1,7 @@
-
 name: CI
 
 # Controls when the action will run. Triggers the workflow on push or pull request 
-# events but only for the master branch
+# events but only for the main branch
 on:
   push:
     branches: [ main ]
@@ -12,12 +11,12 @@ on:
 jobs:
   # This workflow contains a single job called "Build"
   Build:
-    runs-on: [windows-latest]
+    runs-on: windows-latest
 
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-      
+
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1
 
