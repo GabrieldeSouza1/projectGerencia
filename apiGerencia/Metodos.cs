@@ -6,6 +6,8 @@ namespace apiGerencia
     {
         public double obterPesoIdeal(double altura, char sexo)
         {
+
+
             if (sexo == 'M')
             {
                 return double.Parse(((72.7 * altura) - 58).ToString("F2"));
