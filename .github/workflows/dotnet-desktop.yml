@@ -23,6 +23,9 @@ jobs:
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.5
 
+    - name: Run Tests
+      run: dotnet test --no-build --verbosity normal
+      
     - name: Restore NuGet packages
       run: nuget restore apiGerencia.sln
 
