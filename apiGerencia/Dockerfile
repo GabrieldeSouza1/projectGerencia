@@ -8,7 +8,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["apiGerencia/apiGerencia.csproj", "apiGerencia/"]
+COPY ["apiGerencia.csproj", "apiGerencia/"]
 RUN dotnet restore "apiGerencia/apiGerencia.csproj"
 COPY . .
 WORKDIR "/src/apiGerencia"
