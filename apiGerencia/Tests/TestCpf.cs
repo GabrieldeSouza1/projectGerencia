@@ -12,7 +12,7 @@ namespace apiGerencia.Tests
         {
             var metodos = new Metodos();
             string result = metodos.obterCpfOfuscado("111.111.111-51");
-
+        
             Assert.AreEqual("***.111.***-**", result);
         }
 
