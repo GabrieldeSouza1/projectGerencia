@@ -54,12 +54,13 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: teste/tpgerencia
+          images: ./tpgerencia
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: ${{ github.workspace }}/apiGerencia
+          context: ./apiGerencia
+          file: ./apiGerencia/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
