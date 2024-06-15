@@ -2,7 +2,7 @@
 {
     public class Paciente
     {
-        public required int Id { get; set; }
+        public int Id { get; set; }
         public required string Nome { get; set; }
         public required string Sobrenonme { get; set; }
         public required char Sexo { get; set;}

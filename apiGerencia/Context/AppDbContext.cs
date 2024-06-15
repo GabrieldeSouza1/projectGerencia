@@ -12,7 +12,7 @@ namespace tpGerencia.context
         }
 
 
-        public DbSet<Paciente> Funcionarios { get; set; }
+        public DbSet<Paciente> Pacientes { get; set; }
 
 
     }

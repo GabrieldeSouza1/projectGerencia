@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "apiGerencia.Controllers.PacientesController",
-    "Method": "GetFuncionarios",
+    "Method": "GetPacientes",
     "RelativePath": "api/Pacientes",
     "HttpMethod": "GET",
     "IsController": true,
@@ -107,5 +107,31 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apiGerencia.Controllers.PacientesController",
+    "Method": "GetByName",
+    "RelativePath": "api/Pacientes/byName{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "tpGerencia.Models.Paciente",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]
