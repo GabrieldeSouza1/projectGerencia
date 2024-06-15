@@ -54,7 +54,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ./tpgerencia
+          images: teste/tpgerencia
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
