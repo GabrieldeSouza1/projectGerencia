@@ -14,6 +14,12 @@ jobs:
       CONTENT_ROOT_PATH: ${{ github.workspace }}/apiGerencia
 
     steps:
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: 17
+          distribution: 'zulu'
+          
       - uses: actions/checkout@v2
 
       - name: Setup MSBuild
