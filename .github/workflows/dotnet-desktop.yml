@@ -59,5 +59,5 @@ jobs:
           file: ./apiGerencia/Dockerfile
           push: true
           tags: |
-            gabreildesouza1/projectgerencia:${{ github.sha }}
-            gabreildesouza1/projectgerencia:latest
+            gabreilsouza1/testetpgerencia:${{ github.sha }}
+            gabreilsouza1/testetpgerencia:latest
