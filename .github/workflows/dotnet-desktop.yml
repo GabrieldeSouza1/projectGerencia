@@ -26,6 +26,31 @@ jobs:
         run: nuget restore apiGerencia.sln
         working-directory: ${{ github.workspace }}/apiGerencia
 
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+
+      - name: Cache SonarCloud scanner
+        id: cache-sonar-scanner
+        uses: actions/cache@v3
+        with:
+          path: ./.sonar/scanner
+          key: ${{ runner.os }}-sonar-scanner
+          restore-keys: ${{ runner.os }}-sonar-scanner
+
+      - name: Install SonarCloud scanner
+        if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
+        run: dotnet tool install --global dotnet-sonarscanner
+
+      - name: SonarCloud Scan Begin
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: dotnet sonarscanner begin /k:"GabrieldeSouza1_projectGerencia" /o:"gabrieldesouza1" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+        working-directory: ${{ github.workspace }}/apiGerencia
+
       - name: Build the Solution
         run: msbuild apiGerencia.sln /p:Configuration=Release
         working-directory: ${{ github.workspace }}/apiGerencia
@@ -34,12 +59,12 @@ jobs:
         run: dotnet test --no-build --verbosity normal
         working-directory: ${{ github.workspace }}/apiGerencia
 
-      - name: JetBrains ReSharper Inspect Code
-        # You may pin to the exact commit or the version.
-        # uses: JetBrains/ReSharper-InspectCode@ef165568cb02e723172ccae2b944d713624d43e2
-        uses: JetBrains/ReSharper-InspectCode@v0.3
-          
-        
+      - name: SonarCloud Scan End
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+        working-directory: ${{ github.workspace }}/apiGerencia
+
   push_to_registry:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
