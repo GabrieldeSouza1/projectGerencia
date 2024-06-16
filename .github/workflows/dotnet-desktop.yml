@@ -34,21 +34,12 @@ jobs:
         run: dotnet test --no-build --verbosity normal
         working-directory: ${{ github.workspace }}/apiGerencia
 
-      # Commented out or replace the following local action step
-      - name: Run .NET Code Analysis
-        uses: ./
-        id: code-analysis
-        with:
-          project: apiGerencia
-          build-breaking: false
-          all-categories: all
-
-      - name: Upload analysis results
-        uses: actions/upload-artifact@v2
-        with:
-          name: analysis_results.sarif
-          path: ./
-
+      - name: JetBrains ReSharper Inspect Code
+        # You may pin to the exact commit or the version.
+        # uses: JetBrains/ReSharper-InspectCode@ef165568cb02e723172ccae2b944d713624d43e2
+        uses: JetBrains/ReSharper-InspectCode@v0.3
+          
+        
   push_to_registry:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
