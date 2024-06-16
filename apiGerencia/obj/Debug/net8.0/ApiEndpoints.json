@@ -111,7 +111,7 @@
   {
     "ContainingType": "apiGerencia.Controllers.PacientesController",
     "Method": "GetByName",
-    "RelativePath": "api/Pacientes/byName{name}",
+    "RelativePath": "api/Pacientes/byName/{name}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

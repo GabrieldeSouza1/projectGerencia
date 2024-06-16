@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("apiGerencia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+206b1fbcf83f0a1859c7801477ee41d9ee29eb3a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75deda0d6e496d64dea87f61644a356cd9c0f3e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("apiGerencia")]
 [assembly: System.Reflection.AssemblyTitleAttribute("apiGerencia")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

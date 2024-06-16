@@ -9,15 +9,8 @@ namespace apiGerencia.Tests.IntegrationTest
     {
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
-            var contentRoot = Environment.GetEnvironmentVariable("CONTENT_ROOT_PATH");
-            if (!string.IsNullOrEmpty(contentRoot))
-            {
-                builder.UseContentRoot(contentRoot);
-            }
-            else
-            {
-                builder.UseContentRoot("C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\reposito\\apiGerencia");
-            }
+            var contentRoot = Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "..", "apiGerencia");
+            builder.UseContentRoot(contentRoot);
             builder.ConfigureServices(services =>
             {
                 var serviceProvider = new ServiceCollection()
