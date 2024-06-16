@@ -39,7 +39,7 @@ jobs:
         uses: ./
         id: code-analysis
         with:
-          project: ./apiGerencia/Dockerfile
+          project: apiGerencia
           build-breaking: false
           all-categories: all
 
