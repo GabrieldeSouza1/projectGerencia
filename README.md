@@ -86,4 +86,4 @@ Este projeto está licenciado sob a Licença MIT, consulte o arquivo [LICENSE](L
 
 # Agradecimentos
 
-Obrigado por visitar o meu repositório!
+Agradeço aos meus amigos que me ajudaram quando não conseguia prosseguir!
