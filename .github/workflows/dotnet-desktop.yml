@@ -39,7 +39,7 @@ jobs:
         uses: ./
         id: code-analysis
         with:
-          project: .\sample\ClassLibrary1.sln
+          project: ./apiGerencia
           build-breaking: false
           all-categories: all
 
