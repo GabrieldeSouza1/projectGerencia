@@ -12167,11 +12167,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\reposito\\apiGerencia\\apiGerencia.csproj",
+      "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\projectGerencia\\apiGerencia\\apiGerencia.csproj",
       "projectName": "apiGerencia",
-      "projectPath": "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\reposito\\apiGerencia\\apiGerencia.csproj",
+      "projectPath": "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\projectGerencia\\apiGerencia\\apiGerencia.csproj",
       "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\reposito\\apiGerencia\\obj\\",
+      "outputPath": "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\projectGerencia\\apiGerencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",

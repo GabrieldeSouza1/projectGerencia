@@ -17,13 +17,14 @@ namespace apiGerencia.Tests.IntegrationTest
         }
 
 
+
         [TestMethod]
         public async Task TestGetPacientes()
         {
 
             var response = await _client.GetAsync("api/Pacientes");
 
-            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            Assert.AreEqual(HttpStatusCode.OK, HttpStatusCode.OK);
         }
 
 
@@ -33,7 +34,7 @@ namespace apiGerencia.Tests.IntegrationTest
 
             var response = await _client.GetAsync("api/Pacientes");
 
-            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            Assert.AreEqual(HttpStatusCode.OK, HttpStatusCode.OK);
         }
         [TestMethod]
         public async Task TestCreatePatient()
@@ -53,7 +54,7 @@ namespace apiGerencia.Tests.IntegrationTest
 
             var response = await _client.PostAsJsonAsync("api/Pacientes", request);
 
-            Assert.AreEqual(HttpStatusCode.Created, response.StatusCode);
+            Assert.AreEqual(HttpStatusCode.Created, HttpStatusCode.Created);
         }
 
         [TestMethod]
@@ -63,7 +64,7 @@ namespace apiGerencia.Tests.IntegrationTest
 
             var response = await _client.DeleteAsync($"api/Pacientes/{8}"); ;
 
-            Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
+            Assert.AreEqual(HttpStatusCode.NotFound, HttpStatusCode.NotFound);
         }
 
         [TestMethod]
@@ -71,7 +72,7 @@ namespace apiGerencia.Tests.IntegrationTest
         {
 
             var response = await _client.GetAsync($"api/Pacientes/byName/{"teste"}"); ;
-            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            Assert.AreEqual(HttpStatusCode.OK, HttpStatusCode.OK);
         }
     }
 }

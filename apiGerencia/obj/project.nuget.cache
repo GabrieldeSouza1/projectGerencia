@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U2GtoYaMQZ2dw2FFddPgJ+w4scOVX8qEh5xDBP99ZA4bKRn04FUFmfAnONLXOrInTploLk1RkAv7CG+k4Vnjew==",
+  "dgSpecHash": "S/vtiH+1HVigrvAqGK9EsvTOzOsWTWxjlJ1tYU3tCcEv7DUcRHene9MF/1l3G3GpfBuzuqLRRdsqmsYKBqzQjQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\reposito\\apiGerencia\\apiGerencia.csproj",
+  "projectFilePath": "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\projectGerencia\\apiGerencia\\apiGerencia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabri\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
