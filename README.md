@@ -16,6 +16,7 @@ Este projeto implementa uma API de gerenciamento de pacientes utilizando .NET. O
 - [Tecnologias Usadas](#tecnologias-usadas)
 - [Código Fonte](#código-fonte)
 - [Testes](#testes)
+- [Extra](#extra)
 - [Contribuição](#contribuição)
 - [Autores](#autores)
 - [Licença](#licença)
@@ -71,6 +72,9 @@ O código fonte do projeto pode ser encontrado na pasta [apiGerencia](https://gi
 - Testes Unitários: Os testes unitários cobrem a lógica de negócios e validações dos modelos. Foram implementados com UnitTesting.
 
 - Testes de Integração: Os testes de integração verificam a interação entre diferentes componentes do sistema. Foram implementados com UnitTesting.
+
+# Extra
+- Análise de Código[SonarCloud] 
 
 # Contribuição
 
