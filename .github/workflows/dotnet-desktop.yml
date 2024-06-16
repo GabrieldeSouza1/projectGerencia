@@ -60,4 +60,3 @@ jobs:
           file: ./apiGerencia/Dockerfile
           push: true
           tags: gabrielsouza1/testetpgerencia:latest
-          labels: ${{ steps.meta.outputs.labels }}
