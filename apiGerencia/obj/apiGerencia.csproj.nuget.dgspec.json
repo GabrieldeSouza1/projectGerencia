@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gabri\\Source\\Repos\\projectGerencia\\apiGerencia\\apiGerencia.csproj": {}
+    "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\projectGerencia\\apiGerencia\\apiGerencia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gabri\\Source\\Repos\\projectGerencia\\apiGerencia\\apiGerencia.csproj": {
+    "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\projectGerencia\\apiGerencia\\apiGerencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\Source\\Repos\\projectGerencia\\apiGerencia\\apiGerencia.csproj",
+        "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\projectGerencia\\apiGerencia\\apiGerencia.csproj",
         "projectName": "apiGerencia",
-        "projectPath": "C:\\Users\\gabri\\Source\\Repos\\projectGerencia\\apiGerencia\\apiGerencia.csproj",
+        "projectPath": "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\projectGerencia\\apiGerencia\\apiGerencia.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\Source\\Repos\\projectGerencia\\apiGerencia\\obj\\",
+        "outputPath": "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\projectGerencia\\apiGerencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Expecto": {
+              "target": "Package",
+              "version": "[10.2.1, )"
+            },
             "MSTest.TestAdapter": {
               "target": "Package",
               "version": "[3.3.1, )"
@@ -52,6 +56,16 @@
             "MSTest.TestFramework": {
               "target": "Package",
               "version": "[3.3.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.CodeAnalysis.NetAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

@@ -23,16 +23,16 @@ namespace apiGerencia.Controllers
 
         // GET: api/Pacientes
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Paciente>>> GetFuncionarios()
+        public async Task<ActionResult<IEnumerable<Paciente>>> GetPacientes()
         {
-            return await _context.Funcionarios.ToListAsync();
+            return await _context.Pacientes.ToListAsync();
         }
 
         // GET: api/Pacientes/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Paciente>> GetPaciente(int id)
         {
-            var paciente = await _context.Funcionarios.FindAsync(id);
+            var paciente = await _context.Pacientes.FindAsync(id);
 
             if (paciente == null)
             {
@@ -41,7 +41,13 @@ namespace apiGerencia.Controllers
 
             return paciente;
         }
+        [HttpGet("byName/{name}")]
+        public Paciente GetByName(string name)
+        {
+            var paciente = _context.Pacientes.FirstOrDefault(p => p.Nome == name);
 
+            return paciente;
+        }
         // PUT: api/Pacientes/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
@@ -78,7 +84,7 @@ namespace apiGerencia.Controllers
         [HttpPost]
         public async Task<ActionResult<Paciente>> PostPaciente(Paciente paciente)
         {
-            _context.Funcionarios.Add(paciente);
+            _context.Pacientes.Add(paciente);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetPaciente", new { id = paciente.Id }, paciente);
@@ -88,13 +94,13 @@ namespace apiGerencia.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePaciente(int id)
         {
-            var paciente = await _context.Funcionarios.FindAsync(id);
+            var paciente = await _context.Pacientes.FindAsync(id);
             if (paciente == null)
             {
                 return NotFound();
             }
 
-            _context.Funcionarios.Remove(paciente);
+            _context.Pacientes.Remove(paciente);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -102,7 +108,7 @@ namespace apiGerencia.Controllers
 
         private bool PacienteExists(int id)
         {
-            return _context.Funcionarios.Any(e => e.Id == id);
+            return _context.Pacientes.Any(e => e.Id == id);
         }
     }
 }
